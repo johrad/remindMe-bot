@@ -18,38 +18,22 @@ client.on('ready', () => {
 });
 
 
-// MAKE OOP !!!!!!
-
-// THIS IS NOW A REMINDER BOT!!!!!!!
-
-
-
-
 // Create an event listener for messages
 client.on('message', message => {
 
-  if (message.author.bot == true){
-    console.log("I aint doing shit cuz u a bot");
+  if (message.author.bot == true) {
+    // console.log("I aint doing shit cuz u a bot");
     return;
   }
 
   // *TODO* 
   // There's some issue with this statement pls fix thanks
-  
-  else {
-    if (["fortnite", "cancer", "floss"].includes(message.content)) {
-      // Send "pong" to the same channel
-      message.channel.send('https://gfycat.com/MeagerBrokenJackrabbit');
-    }
 
-    if (message.content.startsWith(config.prefix + "help")) { //prefix is imported from config.json
-      message.channel.send("you fool, I dont help people like you");
-    }
-
-    if (["ping", "pong", ":ping_pong:"].includes(message.content.startsWith)) {
-      message.channel.send(":ping_pong:");
-    }
+  if (message.content.startsWith(config.prefix + "hello")) {
+    message.channel.send(":wave:");
   }
+
+
 });
 
 client.login(config.token);
